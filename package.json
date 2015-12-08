@@ -1,0 +1,24 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "- [Node.JS](http://nodejs.org) - [Body-Parser](https://www.npmjs.com/package/body-parser) - [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanwong22/express.git"
+  },
+  "author": "Alan Wong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alanwong22/express/issues"
+  },
+  "homepage": "https://github.com/alanwong22/express#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "nodemon": "^1.8.1"
+  }
+}
