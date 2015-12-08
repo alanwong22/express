@@ -20,9 +20,9 @@ app.get('/', function(req, res){
 
 app.get("/users", function (req, res) {
 	console.log("The req parameter contains request info");
-	console.log(req);
+	//console.log(req);
 	console.log("And the res the response information");
-	console.log(res);
+	//console.log(res);
 	res.send("Logged the request and response");
 });
 
@@ -41,14 +41,13 @@ app.get("/users/:id", function (req, res) {
 		"' and passed the color = '" + color + "'");
 });
 
-// Use POSTMAN to test
-app.post("/users", function (req, res) {
-	console.log(req.body);
+// Use POSTMAN to test: x-www-form-urlencoded
+app.post("/api/users", function (req, res) {
+
 	var name = req.body.name;
 	var email = req.body.email;
 
-	res.send("You sent name = '" + name +
-		"' and email='" + email + "'");
+	res.send("You sent name = '" + name + "' and email='" + email + "'");
 
 });
 
