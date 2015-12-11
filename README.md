@@ -10,13 +10,14 @@
 
 ### Install:
 MongoDB:
+	
 	$ brew update
 	$ brew install mongodb
 	$ mkdir -p /data/db
 	
 	(Update permissions)
 	$ sudo chown -R [current user] /data/db
-
+	
 	Setting db
 	$ mongo
 		MongoDB shell version: 2.6.7
@@ -33,11 +34,11 @@ MongoDB:
 	>
 
 <b>To have launchd start mongodb at login:</b>
-  $ ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
+- $ ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
 <b>Then to load mongodb now:</b>
-  $ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
+- $ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
 <b>Or, if you don't want/need launchctl, you can just run:</b>
-  $ mongod --config /usr/local/etc/mongod.conf
+- $ mongod --config /usr/local/etc/mongod.conf
 
 ## Start Up Sequence
 - MongoDB: $ mongod
