@@ -1,12 +1,12 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://localhost/database_dummy');
 
 // create instance of Schema
 var mongoSchema =   mongoose.Schema;
 // create schema
 var userSchema  = {
-    "name" : String,
-    "address" : String
+    "userEmail" : String,
+    "userPassword" : String
 };
 // create model if not exists.
 module.exports = mongoose.model('userLogin',userSchema);

@@ -19,8 +19,8 @@ app.get('/', function(req, res){
 
 
 var users = require('./routes/users');
+var login = require('./routes/login');
 app.use('/users', users);
+app.use('/login', login);
 
 app.listen(3000);
-console.log("you can now post, delete, get, and patch to http://localhost:3000/users");
-// at prompt: node app.js
