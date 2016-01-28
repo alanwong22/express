@@ -27,19 +27,35 @@ MongoDB:
 	> db
 		[db name]
 	> show dbs
-		admin               (empty)
-		local               0.078GB
-		nodews4             0.078GB
-		[db name]        0.078GB
+		admin						(empty)
+		local						0.078GB
+		nodews4					0.078GB
+		[db name]				0.078GB
 	>
 
 <b>To have launchd start mongodb at login:</b>
 - $ ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
+
 <b>Then to load mongodb now:</b>
 - $ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
+
 <b>Or, if you don't want/need launchctl, you can just run:</b>
 - $ mongod --config /usr/local/etc/mongod.conf
 
 ## Start Up Sequence
 - MongoDB: $ mongod
 - Node: $ nodemon
+
+## URL
+http://localhost:3000/
+http://localhost:3000/users/12345?color=red
+http://localhost:3000/login/
+
+[POSTMAN] - http://localhost:3000/login/
+	POST: {
+					"email" : "Jan@27.2016",
+					"password" : "Doh"
+				}
+	DELETE: {
+						"userEmail" : "Jan@27.2016",
+					}
